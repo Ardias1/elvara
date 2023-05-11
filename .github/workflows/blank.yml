@@ -1,0 +1,35 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    cabang : [  "utama"  ]
+
+  alur kerja_pengiriman     :
+
+# Proses alur kerja terdiri dari satu atau beberapa pekerjaan yang dapat dijalankan secara berurutan atau paralel
+pekerjaan :
+  # Alur kerja ini berisi   yang  ""
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Periksa repositori  di bawah $GITHUB_WORKSPACE, sehingga pekerjaan Anda dapat mengaksesnya
+      - menggunakan : tindakan/checkout@v3
+
+      # Menjalankan satu perintah menggunakan shell pelari
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Menjalankan serangkaian perintah menggunakan shell pelari
+      - nama  : Jalankan skrip multi-baris
+        lari : |
+          echo Add other actions to build,
+          echo test, and deploy your project.
